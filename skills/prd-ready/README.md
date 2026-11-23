@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-prd--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Write a PRD that engineering, design, QA, and downstream planning skills can consume without a clarification meeting. Refuses hollow PRDs, invisible PRDs, feature laundry lists, solution-first PRDs, assumption-soup PRDs, and moving-target PRDs.**
@@ -18,10 +18,10 @@ None of this is a formatting bug. It is a decision-making failure, and the tooli
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -83,12 +83,12 @@ The short frontmatter description is tight on purpose, to speed up skill-routing
 **Negative triggers (route elsewhere):**
 - Designing the architecture ("draw the system diagram," "component breakdown") -> `architecture-ready` (not yet released)
 - Sequencing the roadmap ("quarterly plan," "milestone schedule") -> `roadmap-ready` (not yet released)
-- Picking the stack ("Next.js vs. Remix," "which database") -> [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready)
-- Building the app ("wire the dashboard," "implement RBAC") -> [`production-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready)
-- Setting up the repo ("CI config," "CONTRIBUTING.md") -> [`repo-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready)
-- Deploying ("pipeline," "canary," "rollback") -> [`deploy-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/deploy-ready)
-- Monitoring ("SLO," "alerts," "runbook") -> [`observe-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/observe-ready)
-- Writing launch copy ("landing page," "hero," "Product Hunt post") -> [`launch-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/launch-ready)
+- Picking the stack ("Next.js vs. Remix," "which database") -> [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready)
+- Building the app ("wire the dashboard," "implement RBAC") -> [`production-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready)
+- Setting up the repo ("CI config," "CONTRIBUTING.md") -> [`repo-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready)
+- Deploying ("pipeline," "canary," "rollback") -> [`deploy-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/deploy-ready)
+- Monitoring ("SLO," "alerts," "runbook") -> [`observe-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/observe-ready)
+- Writing launch copy ("landing page," "hero," "Product Hunt post") -> [`launch-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/launch-ready)
 - Pricing strategy ("what to charge") -> business decision, not in scope
 - Competitive analysis as a discipline (feature matrix, market share) -> separate product-research practice
 - Go-to-market planning -> `launch-ready`

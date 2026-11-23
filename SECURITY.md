@@ -6,7 +6,7 @@ Report security vulnerabilities privately, not via public issues or pull request
 
 Use GitHub Private Vulnerability Reporting from the repository's Security tab whenever possible:
 
-1. Open the Security tab for `aihxp/ready-suite`.
+1. Open the Security tab for `hannsxpeter/ready-suite`.
 2. Click "Report a vulnerability."
 3. Include the affected file, reproduction steps, impact, and any proposed mitigation.
 

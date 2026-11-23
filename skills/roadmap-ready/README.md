@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-roadmap--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Sequence software work over time. Every item on the roadmap is a grounded commitment, an outcome-framed direction, or a named open question. Nothing else. No invented dates. No fictional parallelism. No features absent from the PRD.**
@@ -20,10 +20,10 @@ The AI-tooling landscape is full of roadmap generators (Productboard AI, Aha! AI
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -72,16 +72,16 @@ The short frontmatter description is tight on purpose, to speed up skill-routing
 - "Pre-launch freeze." (Mode F)
 
 **Negative triggers (route elsewhere):**
-- "Write a PRD." -> [`prd-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/prd-ready).
-- "Design the architecture." -> [`architecture-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/architecture-ready).
-- "Pick the stack." -> [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready).
-- "Build the feature." -> [`production-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready).
-- "Set up the repo." -> [`repo-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready).
-- "Deploy it." -> [`deploy-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/deploy-ready).
-- "Monitor it." -> [`observe-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/observe-ready).
-- "Launch it." -> [`launch-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/launch-ready).
+- "Write a PRD." -> [`prd-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/prd-ready).
+- "Design the architecture." -> [`architecture-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/architecture-ready).
+- "Pick the stack." -> [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready).
+- "Build the feature." -> [`production-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready).
+- "Set up the repo." -> [`repo-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready).
+- "Deploy it." -> [`deploy-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/deploy-ready).
+- "Monitor it." -> [`observe-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/observe-ready).
+- "Launch it." -> [`launch-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/launch-ready).
 
-**Pairing:** roadmap-ready pairs most often with [`prd-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/prd-ready) (upstream; WHAT the product is), [`architecture-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/architecture-ready) (upstream; the component DAG), and [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready) (same-tier; with what tools). The boundary with each is strict: prd-ready decides what belongs in the product; architecture-ready decides how the pieces fit; stack-ready decides the tools; roadmap-ready decides the sequence over time.
+**Pairing:** roadmap-ready pairs most often with [`prd-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/prd-ready) (upstream; WHAT the product is), [`architecture-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/architecture-ready) (upstream; the component DAG), and [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready) (same-tier; with what tools). The boundary with each is strict: prd-ready decides what belongs in the product; architecture-ready decides how the pieces fit; stack-ready decides the tools; roadmap-ready decides the sequence over time.
 
 ## How it works
 

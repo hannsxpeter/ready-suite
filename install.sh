@@ -19,7 +19,7 @@
 # - Bash 3.2 compatible (macOS default). No associative arrays.
 #
 # Usage:
-#   git clone https://github.com/aihxp/ready-suite && bash ready-suite/install.sh
+#   git clone https://github.com/hannsxpeter/ready-suite && bash ready-suite/install.sh
 #   or run from inside an existing clone: bash install.sh
 #
 # Flags:

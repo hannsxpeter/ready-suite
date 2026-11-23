@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-deploy--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Ship an app from a known-green build into real user-facing environments safely, repeatably, and reversibly.**
@@ -18,10 +18,10 @@ None of these are code bugs. They are shipping-mechanics bugs, and the tooling t
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -77,11 +77,11 @@ The short frontmatter description is tight on purpose, to speed up skill-routing
 - Mode E: "big migration coming up" / "schema change spans weeks"
 
 **Negative triggers (route elsewhere):**
-- Tool selection ("Fly.io vs. Render," "Terraform vs. Pulumi") -> [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready)
+- Tool selection ("Fly.io vs. Render," "Terraform vs. Pulumi") -> [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready)
 - Observability ("add Datadog," "define an SLO," "write a runbook") -> `observe-ready` (not yet released)
-- Repo hygiene ("set up CI for lint," "CODEOWNERS," "branch protection") -> [`repo-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready)
+- Repo hygiene ("set up CI for lint," "CODEOWNERS," "branch protection") -> [`repo-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready)
 - Secrets management ("rotate this key," "set up a vault") -> security territory, not this skill
-- App wiring ("build the users page," "add RBAC") -> [`production-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready)
+- App wiring ("build the users page," "add RBAC") -> [`production-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready)
 - Cost or performance tuning ("this Lambda is expensive") -> cloud-provider docs
 - Launch marketing ("landing page," "SEO") -> `launch-ready` (not yet released)
 

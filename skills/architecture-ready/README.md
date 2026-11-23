@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-architecture--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Given a PRD, produce an architecture that says what system shape to build and why, before any code is written or any tool is chosen. Refuses architecture theater, paper-tiger architecture, cargo-cult cloud-native, stackitecture, resume-driven architecture, horoscope architecture, ghost architecture, and "scalable" as a claim with no numbers.**
@@ -18,10 +18,10 @@ None of that is a drawing-tool bug. Draw.io, Lucidchart, Excalidraw, Mermaid, St
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -80,15 +80,15 @@ The short frontmatter description is tight on purpose, to speed up skill-routing
 - **Mode F (Rescue):** the architecture is misbehaving in production.
 
 **Negative triggers (route elsewhere):**
-- **Product requirements.** That is [`prd-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/prd-ready).
-- **Specific tools, frameworks, databases, auth providers.** That is [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready). architecture-ready names storage and compute shapes; stack-ready picks the actual product.
+- **Product requirements.** That is [`prd-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/prd-ready).
+- **Specific tools, frameworks, databases, auth providers.** That is [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready). architecture-ready names storage and compute shapes; stack-ready picks the actual product.
 - **Timeline and sequencing.** That is `roadmap-ready` (not yet released).
-- **Implementation, vertical slices, UI components.** That is [`production-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready).
-- **Deployment pipelines, environments, rollbacks.** That is [`deploy-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/deploy-ready).
-- **Observability dashboards, alerts, SLOs, runbooks.** That is [`observe-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/observe-ready).
-- **Repo structure, CI, monorepo decisions.** That is [`repo-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready).
+- **Implementation, vertical slices, UI components.** That is [`production-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready).
+- **Deployment pipelines, environments, rollbacks.** That is [`deploy-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/deploy-ready).
+- **Observability dashboards, alerts, SLOs, runbooks.** That is [`observe-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/observe-ready).
+- **Repo structure, CI, monorepo decisions.** That is [`repo-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready).
 - **Adversarial security review, penetration testing.** Future `harden-ready` skill.
-- **Launch copy, marketing.** That is [`launch-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/launch-ready).
+- **Launch copy, marketing.** That is [`launch-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/launch-ready).
 
 **Pairing:** On Claude Code and other skill-invocation-aware harnesses, architecture-ready hands off to `stack-ready` (the chosen storage and compute shapes become stack-ready's pre-filled constraint map), to `roadmap-ready` (the component dependency graph becomes the sequencing input), and to `production-ready` (the system shape, component boundaries, trust boundaries, and NFR targets become the Step 2 architecture-note inputs wholesale). On other harnesses, it surfaces the handoffs to the user.
 

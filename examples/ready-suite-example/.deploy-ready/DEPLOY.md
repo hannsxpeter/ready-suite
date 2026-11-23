@@ -24,7 +24,7 @@ Per the deploy-ready discipline, the SAME built artifact promotes across environ
 The artifact stack:
 
 - **Vercel (web)**: a Vercel deployment, identified by a deployment ID. Deployments are immutable; promotion moves an alias from staging to prod, not a rebuild.
-- **Railway (worker)**: a Docker image tagged `aihxp/pulse-worker:<git-sha>`. Built once on tag push to GitHub; pulled by Railway when promoted.
+- **Railway (worker)**: a Docker image tagged `hannsxpeter/pulse-worker:<git-sha>`. Built once on tag push to GitHub; pulled by Railway when promoted.
 - **Neon (database)**: a branch per environment. Migrations apply per-branch on deploy.
 
 ## Cutover sequence (for the week-13 first-prod deploy)
@@ -40,7 +40,7 @@ The artifact stack:
 
 ```
 1.  Confirm green CI on the release tag.
-    Command: gh run view --repo aihxp/pulse-app --json conclusion -q .conclusion
+    Command: gh run view --repo hannsxpeter/pulse-app --json conclusion -q .conclusion
     Expected: "success"
 
 2.  Apply DB migrations to pilot-prod (expand phase only; no destructive
@@ -53,11 +53,11 @@ The artifact stack:
     Expected: dartlogic.pulse.dev resolves to the new build within 60s.
 
 4.  Promote the Railway worker image.
-    Command: railway service update pulse-worker --image aihxp/pulse-worker:v1.0.0-pilot
+    Command: railway service update pulse-worker --image hannsxpeter/pulse-worker:v1.0.0-pilot
     Expected: railway service health is green within 90s.
 
 5.  Verify the worker started its cron schedule.
-    Command: gh logs --repo aihxp/pulse-worker --since 5m | grep "cron-schedule-loaded"
+    Command: gh logs --repo hannsxpeter/pulse-worker --since 5m | grep "cron-schedule-loaded"
     Expected: "cron-schedule-loaded jobs=3"
 
 6.  Smoke test.
@@ -84,7 +84,7 @@ If any step 1-6 fails: see Rollback (§ below).
 
 **Code rollback**: revert the Vercel alias to the prior deployment (one click in Vercel dashboard, or `vercel rollback <deployment-id>`). The prior deployment is preserved indefinitely; rollback is fast (~30 seconds).
 
-**Worker rollback**: redeploy the prior Railway image tag. `railway service update pulse-worker --image aihxp/pulse-worker:<prior-tag>`.
+**Worker rollback**: redeploy the prior Railway image tag. `railway service update pulse-worker --image hannsxpeter/pulse-worker:<prior-tag>`.
 
 **Database rollback (asymmetric, by design)**:
 

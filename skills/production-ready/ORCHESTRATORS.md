@@ -56,7 +56,7 @@ Mixing both Shape A and Shape B inside a single project (running prd-ready and S
 
 ## Pattern: Pillars as project context
 
-[Pillars](https://github.com/aihxp/pillars) is a project-context standard: root `AGENTS.md` describes the loading protocol, and task-routed `agents/*.md` files carry durable facts, decisions, constraints, workflows, watchouts, and gaps. It is not an orchestrator and not a lifecycle artifact generator. It sits below ready-suite as operating memory the specialists consume.
+[Pillars](https://github.com/hannsxpeter/pillars) is a project-context standard: root `AGENTS.md` describes the loading protocol, and task-routed `agents/*.md` files carry durable facts, decisions, constraints, workflows, watchouts, and gaps. It is not an orchestrator and not a lifecycle artifact generator. It sits below ready-suite as operating memory the specialists consume.
 
 The default integration shape:
 

@@ -21,7 +21,7 @@ Substitutions are double-braced. Resolve from PROGRESS.md.
 ```markdown
 # {{project_name}}
 
-This project was kicked off via the [ready-suite](https://github.com/aihxp/ready-suite). The kickoff arc produced the artifacts listed below; consult the relevant artifact before changes that touch its area.
+This project was kicked off via the [ready-suite](https://github.com/hannsxpeter/ready-suite). The kickoff arc produced the artifacts listed below; consult the relevant artifact before changes that touch its area.
 
 ## Ready-suite artifact map
 

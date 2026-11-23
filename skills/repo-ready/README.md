@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-repo--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 An AI skill that sets up production-grade repositories.
@@ -12,7 +12,7 @@ Feed it to your AI coding agent. Ask it to set up your repo. It handles everythi
 
 **Works with any AI coding agent** -- Claude Code, Cursor, Cline, Windsurf, Copilot, [pi](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent), [OpenClaw](https://github.com/openclaw/openclaw), or any harness that parses the [Agent Skills standard](https://agentskills.io).
 
-> **Part of the [ready-suite](SUITE.md)**, a composable set of eleven AI skills covering the full arc from idea to launch (orchestration, planning, building, shipping). Repo Ready is one of the two building-tier skills, alongside [production-ready](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready) (which owns app wiring; Repo Ready owns repo scaffolding). See [`SUITE.md`](SUITE.md) for the full map.
+> **Part of the [ready-suite](SUITE.md)**, a composable set of eleven AI skills covering the full arc from idea to launch (orchestration, planning, building, shipping). Repo Ready is one of the two building-tier skills, alongside [production-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready) (which owns app wiring; Repo Ready owns repo scaffolding). See [`SUITE.md`](SUITE.md) for the full map.
 
 > **Current version:** 3.0.0 (ready-suite release train).
 
@@ -20,7 +20,7 @@ Feed it to your AI coding agent. Ask it to set up your repo. It handles everythi
 
 **With any AI coding agent:**
 ```bash
-git clone https://github.com/aihxp/ready-suite.git
+git clone https://github.com/hannsxpeter/ready-suite.git
 # Point your AI agent to SKILL.md and the references/ directory
 # Then ask it to set up your repo -- the skill guides the entire process
 ```

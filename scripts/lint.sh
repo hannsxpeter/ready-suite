@@ -448,7 +448,7 @@ check_plugin_sync() {
       skill_fail=1
     fi
 
-    expected_url="https://github.com/aihxp/ready-suite/tree/main/skills/$skill"
+    expected_url="https://github.com/hannsxpeter/ready-suite/tree/main/skills/$skill"
     homepage="$(json_string_value "$manifest" homepage)"
     repository="$(json_string_value "$manifest" repository)"
     if [ "$homepage" != "$expected_url" ]; then

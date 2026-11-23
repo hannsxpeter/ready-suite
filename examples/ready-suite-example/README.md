@@ -1,6 +1,6 @@
 # ready-suite-example
 
-> **End-to-end reference: the [ready-suite](https://github.com/aihxp/ready-suite) applied to a fictional B2B SaaS product (Pulse). All eleven artifacts on disk, with cross-references intact, so you can see what running the suite actually produces.**
+> **End-to-end reference: the [ready-suite](https://github.com/hannsxpeter/ready-suite) applied to a fictional B2B SaaS product (Pulse). All eleven artifacts on disk, with cross-references intact, so you can see what running the suite actually produces.**
 
 This example is **not a real product**. It is a static reference: the artifacts that the eleven ready-suite skills produce, shown in their canonical `.{skill}-ready/` paths the way a real project running the suite would have them on disk. Use it to:
 
@@ -9,7 +9,7 @@ This example is **not a real product**. It is a static reference: the artifacts 
 - Compare the worked-example references in each skill repo to a complete project that uses them all.
 - Read the [DOGFOOD.md](./DOGFOOD.md) reflection on what the suite caught, what it missed, and where the discipline pays for itself.
 
-For the suite itself (the eleven skills + the hub), see https://github.com/aihxp/ready-suite.
+For the suite itself (the eleven skills + the hub), see https://github.com/hannsxpeter/ready-suite.
 
 ## The fictional product: Pulse
 
@@ -62,7 +62,7 @@ Then the top-level files: [`AGENTS.md`](AGENTS.md), [`DESIGN.md`](DESIGN.md).
 - **Composition by artifact, not by RPC.** Each downstream artifact reads from the prior ones and refines, never duplicates. The PRD frames the problem; the architecture answers the how; the roadmap sequences the what; the stack picks the with what. No skill calls another; the artifacts are the contract.
 - **Refusal of named failure modes.** Each artifact has a "what this skill refused" section grep-testable against its own discipline. The PRD is not hollow / invisible / feature-laundry / solution-first / assumption-soup / moving-target. The architecture is not theater / paper-tiger / cargo-cult / stackitecture. The roadmap is not fictional-precision / fictional-parallelism / quarter-stuffing / speculative / feature-factory / shelf / theater. Etc.
 - **Cross-tool standards alignment.** The repo carries an `AGENTS.md` (cross-tool agent brief, Linux Foundation Agentic AI Foundation standard) and a `DESIGN.md` (Google Labs format, Apache 2.0). Any harness that reads these formats can pick up the project cold.
-- **Tag-release parity, byte-identical SUITE.md, em-dash discipline.** The hub's mechanical lint (`scripts/lint.sh` in [aihxp/ready-suite](https://github.com/aihxp/ready-suite)) enforces these across the twelve suite repos. This dogfood repo doesn't run the lint (it's a single-repo example), but the same conventions apply to its own discipline.
+- **Tag-release parity, byte-identical SUITE.md, em-dash discipline.** The hub's mechanical lint (`scripts/lint.sh` in [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite)) enforces these across the twelve suite repos. This dogfood repo doesn't run the lint (it's a single-repo example), but the same conventions apply to its own discipline.
 
 ## What this repo doesn't have
 
@@ -76,6 +76,6 @@ MIT. Use freely.
 
 ## Related
 
-- [aihxp/ready-suite](https://github.com/aihxp/ready-suite) - the suite hub, install scripts, lint, and discovery
+- [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite) - the suite hub, install scripts, lint, and discovery
 - Skill directories: [prd-ready](../../skills/prd-ready), [architecture-ready](../../skills/architecture-ready), [roadmap-ready](../../skills/roadmap-ready), [stack-ready](../../skills/stack-ready), [repo-ready](../../skills/repo-ready), [production-ready](../../skills/production-ready), [deploy-ready](../../skills/deploy-ready), [observe-ready](../../skills/observe-ready), [launch-ready](../../skills/launch-ready), [harden-ready](../../skills/harden-ready), [kickoff-ready](../../skills/kickoff-ready)
 - Each skill directory carries a `references/EXAMPLE-<artifact>.md` worked-example file when applicable; the canonical content of those examples lives here at the canonical paths.

@@ -46,7 +46,7 @@ Skills consume artifacts from upstream siblings and produce artifacts for downst
 
 ## Install locations
 
-Every skill installs the same way on every platform. The hub installer (`bash install.sh` from a clone of `aihxp/ready-suite`) symlinks `SKILL.md` and `references/` from `skills/<skill-name>/` into each detected harness, so updates from `git pull` propagate instantly.
+Every skill installs the same way on every platform. The hub installer (`bash install.sh` from a clone of `hannsxpeter/ready-suite`) symlinks `SKILL.md` and `references/` from `skills/<skill-name>/` into each detected harness, so updates from `git pull` propagate instantly.
 
 | Platform | Install path |
 |---|---|
@@ -78,9 +78,9 @@ Tested with: Claude Code, Codex, Cursor, Windsurf, [pi](https://github.com/badlo
 
 The suite is also compatible with the [`AGENTS.md`](https://agents.md/) cross-tool agent-brief standard (governed by the Linux Foundation's Agentic AI Foundation), the project-root brief read natively by Codex CLI, GitHub Copilot, Cursor, Windsurf, Aider, Zed, Warp, Roo Code, Jules, Factory, Amp, Devin, and others. Two specialists meet that surface: **kickoff-ready** emits a project-root `AGENTS.md` mapping the suite's artifact paths when none exists (Step 6 sub-step 6a), making the suite visible to non-Claude harnesses arriving at the project cold; **repo-ready** scaffolds `AGENTS.md` as the canonical agent brief (project conventions, stack, commands, forbidden actions) with `CLAUDE.md` as a thin overlay or symlink. The two emits are layered: kickoff-ready writes only if `AGENTS.md` is absent, repo-ready writes the conventions side. Both respect any user-authored `AGENTS.md` already on disk.
 
-The suite supports the [Pillars](https://github.com/aihxp/pillars) project-context standard as an optional context layer under `AGENTS.md`. Pillars stores durable project facts, decisions, constraints, and gaps in task-routed `agents/*.md` files. **repo-ready** preserves existing Pillars projects and can scaffold the always-loaded `agents/context.md` and `agents/repo.md` when the user asks for Pillars adoption; **production-ready** loads task-relevant pillars before architecture and implementation work so app slices follow project-specific conventions instead of re-deriving them.
+The suite supports the [Pillars](https://github.com/hannsxpeter/pillars) project-context standard as an optional context layer under `AGENTS.md`. Pillars stores durable project facts, decisions, constraints, and gaps in task-routed `agents/*.md` files. **repo-ready** preserves existing Pillars projects and can scaffold the always-loaded `agents/context.md` and `agents/repo.md` when the user asks for Pillars adoption; **production-ready** loads task-relevant pillars before architecture and implementation work so app slices follow project-specific conventions instead of re-deriving them.
 
-ready-suite sits in the same family as two related standards and projects. [arc-ready](https://github.com/aihxp/arc-ready) is the child born from ready-suite: it preserves the same eleven-tier discipline, named failure modes, grep tests, and artifact paths in one consolidated skill. [Pillars](https://github.com/aihxp/pillars) is the project memory layer: it stores durable context under `agents/*.md` so ready-suite specialists and arc-ready can follow local conventions instead of rediscovering them.
+ready-suite sits in the same family as two related standards and projects. [arc-ready](https://github.com/hannsxpeter/arc-ready) is the child born from ready-suite: it preserves the same eleven-tier discipline, named failure modes, grep tests, and artifact paths in one consolidated skill. [Pillars](https://github.com/hannsxpeter/pillars) is the project memory layer: it stores durable context under `agents/*.md` so ready-suite specialists and arc-ready can follow local conventions instead of rediscovering them.
 
 The suite also consumes the [Google Labs `DESIGN.md`](https://github.com/google-labs-code/design.md) format (Apache 2.0; YAML frontmatter holds machine-readable design tokens, the markdown body holds rationale plus an Agent Prompt Guide). **production-ready** detects a project-root `DESIGN.md` in Step 3 sub-step 3a and consumes it via DTCG export, Tailwind v4 export, or direct YAML read; the linter (`npx @google/design.md lint`) runs before component code so WCAG and token-resolution failures block the slice deterministically. When no `DESIGN.md` is present, production-ready falls back to its archetype + 5-decision derivation (sub-step 3b) and optionally scaffolds a `DESIGN.md` from the chosen tokens before Step 4, so the next agent on the project starts at sub-step 3a, not 3b.
 
@@ -90,20 +90,20 @@ AI-generated apps fail in predictable ways: hollow buttons, placeholder READMEs,
 
 ## Known-good versions
 
-All eleven skills live in the [aihxp/ready-suite](https://github.com/aihxp/ready-suite) monorepo under `skills/<skill>/`. The earlier per-skill repos have been consolidated; their content moved verbatim into this layout. Starting with 3.0.0, the known-good version is a release train: every skill, the ready-suite meta plugin, and marketplace metadata share the root `VERSION`.
+All eleven skills live in the [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo under `skills/<skill>/`. The earlier per-skill repos have been consolidated; their content moved verbatim into this layout. Starting with 3.0.0, the known-good version is a release train: every skill, the ready-suite meta plugin, and marketplace metadata share the root `VERSION`.
 
 | Skill | Current version | Path |
 |---|---|---|
-| **kickoff-ready** | 3.0.2 | [skills/kickoff-ready](https://github.com/aihxp/ready-suite/tree/main/skills/kickoff-ready) |
-| **production-ready** | 3.0.2 | [skills/production-ready](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready) |
-| **repo-ready** | 3.0.2 | [skills/repo-ready](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready) |
-| **stack-ready** | 3.0.2 | [skills/stack-ready](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready) |
-| **deploy-ready** | 3.0.2 | [skills/deploy-ready](https://github.com/aihxp/ready-suite/tree/main/skills/deploy-ready) |
-| **observe-ready** | 3.0.2 | [skills/observe-ready](https://github.com/aihxp/ready-suite/tree/main/skills/observe-ready) |
-| **launch-ready** | 3.0.2 | [skills/launch-ready](https://github.com/aihxp/ready-suite/tree/main/skills/launch-ready) |
-| **prd-ready** | 3.0.2 | [skills/prd-ready](https://github.com/aihxp/ready-suite/tree/main/skills/prd-ready) |
-| **architecture-ready** | 3.0.2 | [skills/architecture-ready](https://github.com/aihxp/ready-suite/tree/main/skills/architecture-ready) |
-| **roadmap-ready** | 3.0.2 | [skills/roadmap-ready](https://github.com/aihxp/ready-suite/tree/main/skills/roadmap-ready) |
-| **harden-ready** | 3.0.2 | [skills/harden-ready](https://github.com/aihxp/ready-suite/tree/main/skills/harden-ready) |
+| **kickoff-ready** | 3.1.0 | [skills/kickoff-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/kickoff-ready) |
+| **production-ready** | 3.1.0 | [skills/production-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready) |
+| **repo-ready** | 3.1.0 | [skills/repo-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready) |
+| **stack-ready** | 3.1.0 | [skills/stack-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready) |
+| **deploy-ready** | 3.1.0 | [skills/deploy-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/deploy-ready) |
+| **observe-ready** | 3.1.0 | [skills/observe-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/observe-ready) |
+| **launch-ready** | 3.1.0 | [skills/launch-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/launch-ready) |
+| **prd-ready** | 3.1.0 | [skills/prd-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/prd-ready) |
+| **architecture-ready** | 3.1.0 | [skills/architecture-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/architecture-ready) |
+| **roadmap-ready** | 3.1.0 | [skills/roadmap-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/roadmap-ready) |
+| **harden-ready** | 3.1.0 | [skills/harden-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/harden-ready) |
 
 The suite is additive. A skill not yet released does not block any other skill from functioning. With the consolidated layout the eleven skills span orchestration (one), planning (four), building (two), and shipping (four).

@@ -1,8 +1,29 @@
 # Hub changelog
 
-Curated change history for the [aihxp/ready-suite](https://github.com/aihxp/ready-suite) hub. The hub is not versioned (no `version` frontmatter; the suite's collective version table lives in `SUITE.md`); this file is a narrative layer above `git log` for readers who want the hub's evolution at a glance.
+Curated change history for the [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite) hub. The hub is not versioned (no `version` frontmatter; the suite's collective version table lives in `SUITE.md`); this file is a narrative layer above `git log` for readers who want the hub's evolution at a glance.
 
 For per-skill changelogs, see each skill's `CHANGELOG.md` under [`skills/<skill>/CHANGELOG.md`](skills/) (e.g., [`skills/prd-ready/CHANGELOG.md`](skills/prd-ready/CHANGELOG.md)). For the full audit trail, see `git log` on this hub.
+
+## 2026-11-23 - 3.1.0 release train: product surface, npm package, owner realign
+
+Minor release across all eleven skills, the meta plugin, marketplace metadata, and the new npm package. Positions ready-suite as an installable product alongside auditor-suite, with a gamified README, SVG assets, and one-command `npx` install.
+
+### Added
+
+- **`@hxp-tools/ready-suite` npm package** with `bin/install.js` that materializes skills under `~/.ready-suite` and runs the existing bash installer.
+- **Product graphics** under `assets/` (`hero.svg`, `quest-map.svg`, `arc-loop.svg`) and a ten-minute [docs/quick-proof.md](docs/quick-proof.md).
+- **Gamified README** (press start, quest map, arc loop) matching the auditor-suite product pattern.
+
+### Changed
+
+- **Owner URLs** realigned from `aihxp` to `hannsxpeter` across hub docs, skills, plugins, and install paths.
+- **GitHub About** simplified; homepage points at the npm package.
+
+### Removed
+
+- **`references/PLUGIN-RESEARCH.md`** (research notes that drifted from the current plugin packaging story).
+
+---
 
 ## 2026-05-30 - 3.0.2 release train: forbidden-unicode purge and structural alignment
 
@@ -48,18 +69,18 @@ The maintenance rituals remain four. Two stale local git worktrees were pruned.
 
 ## 2026-05-09 - Example dogfood absorbed into the hub
 
-The standalone `aihxp/ready-suite-example` repo has been merged into this hub at [`examples/ready-suite-example/`](examples/ready-suite-example) via `git subtree add`, preserving its commit history. The standalone GitHub repo has been archived; its content is now part of the hub. README links to the example were rewritten to relative paths; the in-example `DOGFOOD.md` clone instruction was updated to point at the hub.
+The standalone `hannsxpeter/ready-suite-example` repo has been merged into this hub at [`examples/ready-suite-example/`](examples/ready-suite-example) via `git subtree add`, preserving its commit history. The standalone GitHub repo has been archived; its content is now part of the hub. README links to the example were rewritten to relative paths; the in-example `DOGFOOD.md` clone instruction was updated to point at the hub.
 
 Rationale: the example is reference content, not an installable artifact, but readers reach it from the hub README and benefit from being one `git clone` away rather than two. The earlier consolidation absorbed the eleven specialist repos for the same reason.
 
 ## 2026-05-09 - Monorepo consolidation
 
-The eleven specialist skills, previously each in their own repo (`aihxp/<skill>-ready`), have consolidated into `skills/<skill>/` subdirectories of this hub. The eleven standalone repos have been deleted; this hub is now the canonical home for everything.
+The eleven specialist skills, previously each in their own repo (`hannsxpeter/<skill>-ready`), have consolidated into `skills/<skill>/` subdirectories of this hub. The eleven standalone repos have been deleted; this hub is now the canonical home for everything.
 
 ### What moved
 
 - All eleven specialist repos copied verbatim under `skills/<skill>/`. Every `SKILL.md`, `CHANGELOG.md`, `SUITE.md`, `README.md`, `references/`, `LICENSE`, `SECURITY.md`, `CONTRIBUTING.md`, and `.github/CODEOWNERS` preserved.
-- All cross-skill GitHub links rewritten from `https://github.com/aihxp/<skill>-ready` to `https://github.com/aihxp/ready-suite/tree/main/skills/<skill>-ready`.
+- All cross-skill GitHub links rewritten from `https://github.com/hannsxpeter/<skill>-ready` to `https://github.com/hannsxpeter/ready-suite/tree/main/skills/<skill>-ready`.
 - Per-skill README install sections rewritten to point at the hub's one-shot installer (`bash install.sh` from a hub clone).
 
 ### What changed in the hub tooling
@@ -141,7 +162,7 @@ Audit run via repo-ready audit-mode against all 12 suite repos. The eleven speci
 
 ## 2026-05-09 - See it end-to-end: dogfood pointer
 
-Added a `See it end-to-end: ready-suite-example` section near the top of the hub README pointing at the new [`aihxp/ready-suite-example`](https://github.com/aihxp/ready-suite-example) dogfood repository.
+Added a `See it end-to-end: ready-suite-example` section near the top of the hub README pointing at the new [`hannsxpeter/ready-suite-example`](https://github.com/hannsxpeter/ready-suite-example) dogfood repository.
 
 The dogfood is the canonical end-to-end output of running the suite on a fictional B2B SaaS product (Pulse, a Customer Success ops platform). All eleven artifacts at canonical `.{skill}-ready/` paths, plus an `AGENTS.md` (kickoff-ready emit), a `DESIGN.md` (Google Labs format scaffolded by production-ready), and a `DOGFOOD.md` reflection on what the suite caught and missed.
 
@@ -224,7 +245,7 @@ Hub README: tagline rewritten as agentskills.io-compatible (no longer Claude-Cod
 
 ## 2026-04-29 - Claude Code plugin marketplace
 
-Added a Claude Code plugin marketplace at `.claude-plugin/marketplace.json` bundling all eleven skills. One install command (`/plugin marketplace add aihxp/ready-suite` followed by `/plugin install ready-suite@ready-suite`) installs the meta plugin which depends on every specialist. Each plugin is vendored under `plugins/<skill>/` with its own manifest. The vendored copies are refreshed via `bash scripts/refresh-plugin-skills.sh` whenever a sibling cuts a release.
+Added a Claude Code plugin marketplace at `.claude-plugin/marketplace.json` bundling all eleven skills. One install command (`/plugin marketplace add hannsxpeter/ready-suite` followed by `/plugin install ready-suite@ready-suite`) installs the meta plugin which depends on every specialist. Each plugin is vendored under `plugins/<skill>/` with its own manifest. The vendored copies are refreshed via `bash scripts/refresh-plugin-skills.sh` whenever a sibling cuts a release.
 
 ## 2026-04-25 - One-command install scripts
 

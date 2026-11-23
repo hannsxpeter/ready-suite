@@ -1,3 +1,16 @@
+## v3.1.0 (2026-11-23)
+
+Suite-wide release train alignment. This minor release moves every skill, the ready-suite meta plugin, and the marketplace metadata to the 3.1.0 train together, keeping each skill's artifact paths and trigger ownership intact.
+
+### Changed
+- Aligns this skill with the ready-suite 3.1.0 release train.
+- Keeps the skill's existing artifact paths and trigger ownership intact while publishing the shared version.
+
+### Why a minor
+This is a coordinated suite release: all eleven skills, the ready-suite meta plugin, and the marketplace metadata move together for the 3.1.0 train.
+
+---
+
 ## v3.0.2 (2026-05-30)
 
 Suite-wide release train alignment. This patch release moves every skill, the ready-suite meta plugin, and the marketplace metadata to the 3.0.2 train together, keeping each skill's artifact paths and trigger ownership intact.
@@ -165,7 +178,7 @@ Documentary-only sibling-ship tracking.
 
 ## v1.1.1 (2026-05-09)
 
-Documentation-only patch. Suite-wide `SUITE.md` sync for the v2.6.0 release of [production-ready](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready), which adds first-class consumption of the [Google Labs `DESIGN.md`](https://github.com/google-labs-code/design.md) format as the canonical design-system token source for dashboards. This skill's behavior, frontmatter contract, and reference library are unchanged.
+Documentation-only patch. Suite-wide `SUITE.md` sync for the v2.6.0 release of [production-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready), which adds first-class consumption of the [Google Labs `DESIGN.md`](https://github.com/google-labs-code/design.md) format as the canonical design-system token source for dashboards. This skill's behavior, frontmatter contract, and reference library are unchanged.
 
 ### Changed
 
@@ -208,7 +221,7 @@ Documentation-only patch. Adds first-class support for [pi](https://github.com/b
 
 - **Frontmatter**: `compatible_with` now lists `pi`, `openclaw`, and `any-agentskills-compatible-harness` (the latter replaces the older `any-agent-with-skill-loading` value for tighter standards-level signaling).
 - **SUITE.md**: install-locations table adds rows for pi, OpenClaw, and the neutral Agent Skills path; new "Standards" section names the standard and the verified harnesses (Claude Code, Codex, Cursor, Windsurf, pi, OpenClaw).
-- **Hub install.sh / uninstall.sh** (in [aihxp/ready-suite](https://github.com/aihxp/ready-suite)): detect pi (`~/.pi/`) and OpenClaw (`~/.openclaw/`), write to the neutral `~/.agents/skills/` path. No regressions on the existing Claude Code / Codex / Cursor flow.
+- **Hub install.sh / uninstall.sh** (in [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite)): detect pi (`~/.pi/`) and OpenClaw (`~/.openclaw/`), write to the neutral `~/.agents/skills/` path. No regressions on the existing Claude Code / Codex / Cursor flow.
 
 ### Why a patch, not a minor
 
@@ -272,7 +285,7 @@ Six reference files. Six is enough; the skill does not pad.
 
 ### Suite changes
 
-- **SUITE.md introduces a new "orchestration" tier.** Coordinated byte-identical sync across all eleven repos: the ten core-suite siblings plus the ready-suite hub at aihxp/ready-suite. Each sibling's SUITE.md `Known-good versions` table gains a `kickoff-ready` row. Each sibling repo bumps its own version as a documentation-only patch to track the eleventh-sibling release.
+- **SUITE.md introduces a new "orchestration" tier.** Coordinated byte-identical sync across all eleven repos: the ten core-suite siblings plus the ready-suite hub at hannsxpeter/ready-suite. Each sibling's SUITE.md `Known-good versions` table gains a `kickoff-ready` row. Each sibling repo bumps its own version as a documentation-only patch to track the eleventh-sibling release.
 - The composition-with-orchestrators principle in production-ready/ORCHESTRATORS.md is unchanged: ready-suite skills are orchestrator-agnostic by design. kickoff-ready is itself an orchestrator (the meta-tier) but does not couple to any other orchestrator. Phase orchestrators (GSD, BMAD) compose with kickoff-ready at the boundary; kickoff-ready hands off PROGRESS.md and gets out of the way.
 
 ### Dogfood

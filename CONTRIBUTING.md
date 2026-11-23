@@ -1,6 +1,6 @@
 # Contributing to the ready-suite
 
-Thanks for considering a contribution. The ready-suite is one repo at [`aihxp/ready-suite`](https://github.com/aihxp/ready-suite): hub-level files at the root, eleven specialist skills under `skills/<skill-name>/`. This file documents the contribution model and the conventions every PR is held to.
+Thanks for considering a contribution. The ready-suite is one repo at [`hannsxpeter/ready-suite`](https://github.com/hannsxpeter/ready-suite): hub-level files at the root, eleven specialist skills under `skills/<skill-name>/`. This file documents the contribution model and the conventions every PR is held to.
 
 For maintainers (or anyone landing a coordinated cross-suite patch), see [`MAINTAINING.md`](MAINTAINING.md) for the SUITE.md sync ritual, the version-bump rules, and the release procedure.
 
@@ -75,7 +75,7 @@ bash scripts/refresh-plugin-skills.sh
 ## Running the lint locally
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git
+git clone https://github.com/hannsxpeter/ready-suite.git
 cd ready-suite
 bash scripts/lint.sh                   # all checks
 bash scripts/lint.sh --verbose         # show ok lines too

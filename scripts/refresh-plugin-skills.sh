@@ -76,9 +76,9 @@ write_specialist_manifest() {
   "name": "$skill",
   "description": "$desc_escaped",
   "version": "$version",
-  "author": { "name": "aihxp", "url": "https://github.com/aihxp" },
-  "homepage": "https://github.com/aihxp/ready-suite/tree/main/skills/$skill",
-  "repository": "https://github.com/aihxp/ready-suite/tree/main/skills/$skill",
+  "author": { "name": "aihxp", "url": "https://github.com/hannsxpeter" },
+  "homepage": "https://github.com/hannsxpeter/ready-suite/tree/main/skills/$skill",
+  "repository": "https://github.com/hannsxpeter/ready-suite/tree/main/skills/$skill",
   "license": "MIT",
   "keywords": ["ready-suite", "ai-skill"]
 }
@@ -112,10 +112,10 @@ write_meta_marketplace() {
     printf '{\n'
     printf '  "name": "ready-suite",\n'
     printf '  "description": "Eleven AI skills covering the full arc from idea to launch, plus a meta plugin that bundles them all.",\n'
-    printf '  "owner": { "name": "aihxp", "url": "https://github.com/aihxp" },\n'
+    printf '  "owner": { "name": "aihxp", "url": "https://github.com/hannsxpeter" },\n'
     printf '  "metadata": {\n'
     printf '    "version": "%s",\n' "$version"
-    printf '    "homepage": "https://github.com/aihxp/ready-suite"\n'
+    printf '    "homepage": "https://github.com/hannsxpeter/ready-suite"\n'
     printf '  },\n'
     printf '  "plugins": [\n'
     first=1
@@ -152,9 +152,9 @@ write_meta_plugin() {
     printf '  "name": "ready-suite",\n'
     printf '  "description": "Bundle of all eleven ready-suite specialist skills. Installing this plugin pulls every specialist via dependencies; install one of the specialists directly if you want only that skill.",\n'
     printf '  "version": "%s",\n' "$version"
-    printf '  "author": { "name": "aihxp", "url": "https://github.com/aihxp" },\n'
-    printf '  "homepage": "https://github.com/aihxp/ready-suite",\n'
-    printf '  "repository": "https://github.com/aihxp/ready-suite",\n'
+    printf '  "author": { "name": "aihxp", "url": "https://github.com/hannsxpeter" },\n'
+    printf '  "homepage": "https://github.com/hannsxpeter/ready-suite",\n'
+    printf '  "repository": "https://github.com/hannsxpeter/ready-suite",\n'
     printf '  "license": "MIT",\n'
     printf '  "keywords": ["ready-suite", "meta", "bundle"],\n'
     printf '  "dependencies": [\n'

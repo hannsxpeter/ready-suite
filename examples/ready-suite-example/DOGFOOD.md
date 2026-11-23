@@ -125,7 +125,7 @@ The dogfood is frozen at the moment of this write-up. The Pulse story doesn't co
 
 **Why frozen:** the dogfood's value is as a static reference. A reader can `git clone` and walk through one coherent example. If the example kept changing, the value-proof would be diluted by maintenance churn. Future dogfoods (a different fictional product at a different scale) would land in their own repos.
 
-If a real project running the suite wants to publish their artifacts as a community-contributed example, that becomes a separate `aihxp/ready-suite-real-example-X` repo or a community-contributed list in the hub README. The dogfood pattern is reproducible.
+If a real project running the suite wants to publish their artifacts as a community-contributed example, that becomes a separate `hannsxpeter/ready-suite-real-example-X` repo or a community-contributed list in the hub README. The dogfood pattern is reproducible.
 
 ## TL;DR
 
@@ -133,6 +133,6 @@ The suite holds up end-to-end on a fictional B2B SaaS product. Every artifact is
 
 The dogfood does not prove real-world adoption. It proves the artifacts compose; it doesn't prove the artifacts are useful in practice. That proof requires a real project with real users, real schedule pressure, and real failure modes that the fiction can't simulate.
 
-For now: this is the strongest evidence the suite has shipped. A reader can `git clone aihxp/ready-suite` and look under `examples/ready-suite-example/` to see what running the suite produces. The friction surfaces named above are honest critiques the suite's v1.x roadmap can address.
+For now: this is the strongest evidence the suite has shipped. A reader can `git clone hannsxpeter/ready-suite` and look under `examples/ready-suite-example/` to see what running the suite produces. The friction surfaces named above are honest critiques the suite's v1.x roadmap can address.
 
 The suite is opinionated. So is this reflection.

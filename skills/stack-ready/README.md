@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-stack--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **An AI skill for any coding agent: Claude Code, Codex, Cursor, Windsurf, Copilot, or your own.**
@@ -26,10 +26,10 @@ Stack Ready is a **skill**, a structured AI instruction set that any coding agen
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -64,8 +64,8 @@ The frontmatter description is tight on purpose, to keep skill-routing fast. The
 
 **Negative triggers (route elsewhere):**
 - Purely abstract debates with no project attached ("is Rust better than Go"). Skill requires a job.
-- "Now build the app with [X]." That's [production-ready](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready).
-- "Set up CI for my Next.js project." That's [repo-ready](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready).
+- "Now build the app with [X]." That's [production-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready).
+- "Set up CI for my Next.js project." That's [repo-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready).
 - Single-library micro-questions ("zod vs. valibot for validation speed"). Answer inline unless the user wants the full scoring pass.
 - Vendor sales questions ("is Vercel worth the price"). Answer factually; don't run the full workflow.
 

@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-kickoff--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Sequence the ten ready-suite specialists for a greenfield project. Refuses scope leak, rubber-stamp orchestration, phantom resume, ghost handoff, and happy-path orchestration.**
@@ -20,10 +20,10 @@ This is the eleventh skill in the ready-suite and the only one in the meta-tier.
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -67,16 +67,16 @@ The short frontmatter description is tight on purpose. The full trigger surface:
 - Import: PROGRESS.md absent but one or more `.{skill}-ready/` directories already exist; the user is bringing prior work into the chain
 
 **Negative triggers (route elsewhere):**
-- Writing the PRD -> [`prd-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/prd-ready)
-- Designing the architecture -> [`architecture-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/architecture-ready)
-- Sequencing a roadmap -> [`roadmap-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/roadmap-ready)
-- Picking a stack -> [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready)
-- Setting up the repo -> [`repo-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready)
-- Building the app -> [`production-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready)
-- Deploying -> [`deploy-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/deploy-ready)
-- Wiring monitoring -> [`observe-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/observe-ready)
-- Producing launch materials -> [`launch-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/launch-ready)
-- Adversarial review -> [`harden-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/harden-ready)
+- Writing the PRD -> [`prd-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/prd-ready)
+- Designing the architecture -> [`architecture-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/architecture-ready)
+- Sequencing a roadmap -> [`roadmap-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/roadmap-ready)
+- Picking a stack -> [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready)
+- Setting up the repo -> [`repo-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready)
+- Building the app -> [`production-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready)
+- Deploying -> [`deploy-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/deploy-ready)
+- Wiring monitoring -> [`observe-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/observe-ready)
+- Producing launch materials -> [`launch-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/launch-ready)
+- Adversarial review -> [`harden-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/harden-ready)
 - Existing-codebase migration ("we have a half-built thing; help us finish") -> the specific specialist that fills the gap. kickoff-ready is greenfield-only.
 - Ongoing phase / milestone work after the kickoff arc completes -> a phase orchestrator (GSD, BMAD, etc.) per `production-ready/ORCHESTRATORS.md`.
 - Non-suite work (blog posts, debugging, refactoring, hiring, branding) -> surface to the harness for general routing.
@@ -145,7 +145,7 @@ See [`RESEARCH-2026-04.md`](references/RESEARCH-2026-04.md) Section 2 for the fu
 
 kickoff-ready ends when the kickoff arc completes. Ongoing phase / milestone work is a different orchestration pattern. Composing options:
 
-- **GSD** ([get-shit-done](https://github.com/aihxp/gsd) or equivalent). The phase / milestone orchestrator. kickoff-ready hands off PROGRESS.md; GSD picks up at the next phase. Per [production-ready/ORCHESTRATORS.md](https://github.com/aihxp/ready-suite/blob/main/skills/production-ready/ORCHESTRATORS.md).
+- **GSD** ([get-shit-done](https://github.com/hannsxpeter/gsd) or equivalent). The phase / milestone orchestrator. kickoff-ready hands off PROGRESS.md; GSD picks up at the next phase. Per [production-ready/ORCHESTRATORS.md](https://github.com/hannsxpeter/ready-suite/blob/main/skills/production-ready/ORCHESTRATORS.md).
 - **BMAD** ([Breakthrough Method](https://github.com/bmad-code-org/BMAD-METHOD)). Persona-driven. Not recommended in the same project as kickoff-ready, since BMAD has its own kickoff path. If you want both, run kickoff-ready first, then transition cleanly per the BMAD-as-orchestrator pattern documented in production-ready/ORCHESTRATORS.md.
 - **No phase orchestrator.** The user invokes individual siblings as needed (a roadmap revision, a hardening pass, a launch follow-up). PROGRESS.md remains the kickoff record but does not track ongoing work.
 

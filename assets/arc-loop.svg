@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="t d">
+  <title id="t">Ready Suite arc loop</title>
+  <desc id="d">Composition loop: intent, plan, build, ship, artifacts. Skills never call each other; files at known paths are the handoff.</desc>
+  <style>
+    .sans{font-family:"Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif}
+    .mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+  </style>
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="10" fill="#0E1418" stroke="#243038"/>
+  <path d="M1 44H1199V11a10 10 0 0 0-10-10H11A10 10 0 0 0 1 11Z" fill="#152026"/>
+  <line x1="1" y1="44" x2="1199" y2="44" stroke="#243038"/>
+  <text x="32" y="28" class="mono" font-size="13" font-weight="700" fill="#3DB8A9" letter-spacing="1.5">ARC LOOP</text>
+  <text x="1168" y="28" class="mono" font-size="13" fill="#8AA0A8" text-anchor="end">ARTIFACTS ARE THE CONTRACT</text>
+
+  <g transform="translate(40 100)">
+    <rect width="200" height="180" rx="4" fill="#152026" stroke="#3DB8A9"/>
+    <text x="100" y="48" class="mono" font-size="22" font-weight="700" fill="#3DB8A9" text-anchor="middle">1</text>
+    <text x="100" y="92" class="sans" font-size="22" font-weight="700" fill="#E8F2F4" text-anchor="middle">Intent</text>
+    <text x="100" y="126" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">kickoff-ready</text>
+    <text x="100" y="152" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">routes the arc</text>
+  </g>
+  <text x="270" y="200" class="mono" font-size="28" fill="#3DB8A9">-&gt;</text>
+  <g transform="translate(300 100)">
+    <rect width="200" height="180" rx="4" fill="#152026" stroke="#243038"/>
+    <text x="100" y="48" class="mono" font-size="22" font-weight="700" fill="#3DB8A9" text-anchor="middle">2</text>
+    <text x="100" y="92" class="sans" font-size="22" font-weight="700" fill="#E8F2F4" text-anchor="middle">Plan</text>
+    <text x="100" y="126" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">prd / arch</text>
+    <text x="100" y="152" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">roadmap / stack</text>
+  </g>
+  <text x="530" y="200" class="mono" font-size="28" fill="#3DB8A9">-&gt;</text>
+  <g transform="translate(560 100)">
+    <rect width="200" height="180" rx="4" fill="#152026" stroke="#243038"/>
+    <text x="100" y="48" class="mono" font-size="22" font-weight="700" fill="#3DB8A9" text-anchor="middle">3</text>
+    <text x="100" y="92" class="sans" font-size="22" font-weight="700" fill="#E8F2F4" text-anchor="middle">Build</text>
+    <text x="100" y="126" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">repo-ready</text>
+    <text x="100" y="152" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">production-ready</text>
+  </g>
+  <text x="790" y="200" class="mono" font-size="28" fill="#3DB8A9">-&gt;</text>
+  <g transform="translate(820 100)">
+    <rect width="200" height="180" rx="4" fill="#152026" stroke="#243038"/>
+    <text x="100" y="48" class="mono" font-size="22" font-weight="700" fill="#3DB8A9" text-anchor="middle">4</text>
+    <text x="100" y="92" class="sans" font-size="22" font-weight="700" fill="#E8F2F4" text-anchor="middle">Ship</text>
+    <text x="100" y="126" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">deploy / observe</text>
+    <text x="100" y="152" class="sans" font-size="14" fill="#8AA0A8" text-anchor="middle">launch / harden</text>
+  </g>
+  <text x="1050" y="200" class="mono" font-size="28" fill="#3DB8A9">-&gt;</text>
+  <g transform="translate(1080 140)">
+    <text x="0" y="20" class="mono" font-size="14" font-weight="700" fill="#3DB8A9">files</text>
+    <text x="0" y="48" class="mono" font-size="14" fill="#8AA0A8">not</text>
+    <text x="0" y="76" class="mono" font-size="14" fill="#8AA0A8">calls</text>
+  </g>
+</svg>

@@ -22,7 +22,7 @@ prior_audits:
 
 # Repo Audit Report -- 2026-05-09 (re-audit)
 
-Self-audit of `aihxp/repo-ready` re-run on 2026-05-09 against the same v1.4 audit-mode rubric used at the prior audit (2026-04-22). The prior audit closed the v1.5 "Dogfood: Apply Skill to Itself" milestone at 33/35 (Tier 4); this re-audit confirms that score is unchanged after six patch releases (v1.6.9 through v1.6.14) of suite-wide SUITE.md syncs, version-frontmatter bumps, and minor `.gitignore` additions.
+Self-audit of `hannsxpeter/repo-ready` re-run on 2026-05-09 against the same v1.4 audit-mode rubric used at the prior audit (2026-04-22). The prior audit closed the v1.5 "Dogfood: Apply Skill to Itself" milestone at 33/35 (Tier 4); this re-audit confirms that score is unchanged after six patch releases (v1.6.9 through v1.6.14) of suite-wide SUITE.md syncs, version-frontmatter bumps, and minor `.gitignore` additions.
 
 ## Re-audit delta (2026-04-22 -> 2026-05-09)
 
@@ -44,11 +44,11 @@ Delta:          0
 **Open items still open (no change since prior audit):**
 
 - **REPO-6.2** -- Release automation. Releases remain manual via `git tag` + `gh release create`. Same trade-off rationale as the prior audit: a Markdown skill with human-curated release notes does not benefit from semantic-release / release-please overhead.
-- **Implicit follow-up -- CI on `main`.** The hub's lint workflow (`aihxp/ready-suite/.github/workflows/lint.yml`) now runs on every push to the hub, on PRs to the hub, and daily at 06:00 UTC; it covers SUITE.md sync, frontmatter-version match, tag-release parity, unicode-clean, compatible_with, and trigger-overlap across all 12 repos. This **reduces** the load-bearing-ness of repo-ready's own per-repo CI; it does not eliminate it (the hub lint is suite-meta, not repo-internal). The ruleset on `main` here still has registered status checks not yet exercised; opening a trivial PR remains the 2-minute follow-up. Same disposition as the prior audit.
+- **Implicit follow-up -- CI on `main`.** The hub's lint workflow (`hannsxpeter/ready-suite/.github/workflows/lint.yml`) now runs on every push to the hub, on PRs to the hub, and daily at 06:00 UTC; it covers SUITE.md sync, frontmatter-version match, tag-release parity, unicode-clean, compatible_with, and trigger-overlap across all 12 repos. This **reduces** the load-bearing-ness of repo-ready's own per-repo CI; it does not eliminate it (the hub lint is suite-meta, not repo-internal). The ruleset on `main` here still has registered status checks not yet exercised; opening a trivial PR remains the 2-minute follow-up. Same disposition as the prior audit.
 
 **New material since prior audit (informational):**
 
-- Hub-level `scripts/lint.sh` (in `aihxp/ready-suite`) mechanically enforces several repo-ready disciplines as a meta-check across the suite: byte-identical `SUITE.md`, frontmatter-version-matches-CHANGELOG, every-tag-has-a-release, no-em-dashes-in-suite-files, `compatible_with` standards-level values. This does not change repo-ready's own audit score but it is a load-bearing discipline layer that applies to repo-ready alongside its own CI.
+- Hub-level `scripts/lint.sh` (in `hannsxpeter/ready-suite`) mechanically enforces several repo-ready disciplines as a meta-check across the suite: byte-identical `SUITE.md`, frontmatter-version-matches-CHANGELOG, every-tag-has-a-release, no-em-dashes-in-suite-files, `compatible_with` standards-level values. This does not change repo-ready's own audit score but it is a load-bearing discipline layer that applies to repo-ready alongside its own CI.
 - New `.gitignore` entries (`.claude/settings.local.json`, `.planning/`) prevent a class of accidental commits that the prior audit did not flag (because the prior audit's `.gitignore` shipped before the hub lint surfaced these patterns as drift in sister repos).
 
 ## Audit delta (v1.5 Phase 3 close)

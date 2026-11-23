@@ -1,0 +1,52 @@
+{
+  "name": "@hxp-tools/ready-suite",
+  "version": "3.1.0",
+  "description": "Eleven composable AI skills from idea to launch. Each owns one stage. Artifacts are the contract.",
+  "bin": {
+    "ready-suite": "bin/install.js"
+  },
+  "scripts": {
+    "start": "node bin/install.js",
+    "pack:check": "npm pack --dry-run",
+    "release:check": "bash scripts/lint.sh --verbose && npm run pack:check",
+    "prepublishOnly": "npm run release:check"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "agent-skills",
+    "ai",
+    "claude-code",
+    "codex",
+    "cursor",
+    "prd",
+    "architecture",
+    "roadmap",
+    "deploy",
+    "ready-suite"
+  ],
+  "author": "hannsxpeter",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannsxpeter/ready-suite.git"
+  },
+  "homepage": "https://github.com/hannsxpeter/ready-suite#readme",
+  "bugs": {
+    "url": "https://github.com/hannsxpeter/ready-suite/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "install.sh",
+    "uninstall.sh",
+    "VERSION",
+    "SUITE.md",
+    "README.md",
+    "LICENSE"
+  ]
+}

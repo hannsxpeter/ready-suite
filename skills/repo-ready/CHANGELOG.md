@@ -1,3 +1,16 @@
+## v3.1.0 (2026-11-23)
+
+Suite-wide release train alignment. This minor release moves every skill, the ready-suite meta plugin, and the marketplace metadata to the 3.1.0 train together, keeping each skill's artifact paths and trigger ownership intact.
+
+### Changed
+- Aligns this skill with the ready-suite 3.1.0 release train.
+- Keeps the skill's existing artifact paths and trigger ownership intact while publishing the shared version.
+
+### Why a minor
+This is a coordinated suite release: all eleven skills, the ready-suite meta plugin, and the marketplace metadata move together for the 3.1.0 train.
+
+---
+
 ## v3.0.2 (2026-05-30)
 
 Suite-wide release train alignment. This patch release moves every skill, the ready-suite meta plugin, and the marketplace metadata to the 3.0.2 train together, keeping each skill's artifact paths and trigger ownership intact.
@@ -58,7 +71,7 @@ The workflow gains observable behavior for a new project-context standard. The c
 
 Minor release. Adds **Mode D (Multi-repo suite)** to the workflow. Mode D applies when the user is building or maintaining a coordinated collection of repos that ship together (a skill suite, a multi-package library, a meta-framework with separate plugin repos, an org-wide reference implementation across N services). Wraps per-unit scaffolding (Modes A/B) AND adds the cross-unit invariants: byte-identical collection map, coordinated version-table discipline, tag-release parity, the meta-linter pattern, the five maintenance rituals.
 
-The pattern is generalized from the [aihxp/ready-suite](https://github.com/aihxp/ready-suite) suite (12 repos: 11 specialist skills + 1 hub) but applies to any multi-repo collection where: (a) the repos ship together as a logical unit, (b) at least one cross-repo invariant exists, (c) the maintainer wants the discipline mechanically enforced rather than documented-and-hoped-for.
+The pattern is generalized from the [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite) suite (12 repos: 11 specialist skills + 1 hub) but applies to any multi-repo collection where: (a) the repos ship together as a logical unit, (b) at least one cross-repo invariant exists, (c) the maintainer wants the discipline mechanically enforced rather than documented-and-hoped-for.
 
 ### Added
 
@@ -72,7 +85,7 @@ The skill gains a new mode + a new substantial reference. Mode D is observable t
 
 ### Cross-references
 
-The canonical example of Mode D is the ready-suite hub itself. The pattern in `references/multi-repo-suite-layout.md` is generalized from `aihxp/ready-suite`. The aihxp/ready-suite/MAINTAINING.md now cross-references this new reference as the canonical source; the suite-specific MAINTAINING.md becomes the worked-example overlay above the generic pattern.
+The canonical example of Mode D is the ready-suite hub itself. The pattern in `references/multi-repo-suite-layout.md` is generalized from `hannsxpeter/ready-suite`. The hannsxpeter/ready-suite/MAINTAINING.md now cross-references this new reference as the canonical source; the suite-specific MAINTAINING.md becomes the worked-example overlay above the generic pattern.
 
 ---
 
@@ -161,7 +174,7 @@ Documentary-only sibling-ship tracking.
 
 ## v1.6.11 (2026-05-09)
 
-Documentation-only patch. Suite-wide `SUITE.md` sync for the v2.6.0 release of [production-ready](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready), which adds first-class consumption of the [Google Labs `DESIGN.md`](https://github.com/google-labs-code/design.md) format as the canonical design-system token source for dashboards. This skill's behavior, frontmatter contract, and reference library are unchanged.
+Documentation-only patch. Suite-wide `SUITE.md` sync for the v2.6.0 release of [production-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready), which adds first-class consumption of the [Google Labs `DESIGN.md`](https://github.com/google-labs-code/design.md) format as the canonical design-system token source for dashboards. This skill's behavior, frontmatter contract, and reference library are unchanged.
 
 ### Changed
 
@@ -202,7 +215,7 @@ Documentation-only patch. Adds first-class support for [pi](https://github.com/b
 
 - **Frontmatter**: `compatible_with` now lists `pi`, `openclaw`, and `any-agentskills-compatible-harness` (the latter replaces the older `any-agent-with-skill-loading` value for tighter standards-level signaling).
 - **SUITE.md**: install-locations table adds rows for pi, OpenClaw, and the neutral Agent Skills path; new "Standards" section names the standard and the verified harnesses (Claude Code, Codex, Cursor, Windsurf, pi, OpenClaw).
-- **Hub install.sh / uninstall.sh** (in [aihxp/ready-suite](https://github.com/aihxp/ready-suite)): detect pi (`~/.pi/`) and OpenClaw (`~/.openclaw/`), write to the neutral `~/.agents/skills/` path. No regressions on the existing Claude Code / Codex / Cursor flow.
+- **Hub install.sh / uninstall.sh** (in [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite)): detect pi (`~/.pi/`) and OpenClaw (`~/.openclaw/`), write to the neutral `~/.agents/skills/` path. No regressions on the existing Claude Code / Codex / Cursor flow.
 
 ### Why a patch, not a minor
 
@@ -213,7 +226,7 @@ The skill's behavior, references, and workflow are unchanged. Only the frontmatt
 
 ## v1.6.8 (2026-05-06)
 
-Documentation-only patch. Suite-wide SUITE.md refresh introducing the new **orchestration** tier and the eleventh sibling, [kickoff-ready](https://github.com/aihxp/ready-suite/tree/main/skills/kickoff-ready) v1.0.0. kickoff-ready sequences the ten core-suite specialists for greenfield projects from raw user intent: it triggers from a fresh idea ("kickoff," "I have an idea help me ship it") and invokes prd-ready -> architecture-ready -> roadmap-ready -> stack-ready -> repo-ready -> production-ready -> deploy-ready -> observe-ready -> (launch-ready || harden-ready), verifying each artifact on disk before advancing. It produces only `.kickoff-ready/PROGRESS.md`; it never produces specialist content. No behavioral changes to this skill.
+Documentation-only patch. Suite-wide SUITE.md refresh introducing the new **orchestration** tier and the eleventh sibling, [kickoff-ready](https://github.com/hannsxpeter/ready-suite/tree/main/skills/kickoff-ready) v1.0.0. kickoff-ready sequences the ten core-suite specialists for greenfield projects from raw user intent: it triggers from a fresh idea ("kickoff," "I have an idea help me ship it") and invokes prd-ready -> architecture-ready -> roadmap-ready -> stack-ready -> repo-ready -> production-ready -> deploy-ready -> observe-ready -> (launch-ready || harden-ready), verifying each artifact on disk before advancing. It produces only `.kickoff-ready/PROGRESS.md`; it never produces specialist content. No behavioral changes to this skill.
 
 ### Changed
 
@@ -228,7 +241,7 @@ The skill's behavior, frontmatter contract, and reference library are unchanged.
 
 ## v1.6.7 (2026-04-24)
 
-Documentation-only patch. Removes the Mirror Box dogfood track from the ready-suite. The aihxp/mirror-box repo has been archived; the canonical-dogfood section in SUITE.md is gone; per-skill dogfood/ folders are deleted.
+Documentation-only patch. Removes the Mirror Box dogfood track from the ready-suite. The hannsxpeter/mirror-box repo has been archived; the canonical-dogfood section in SUITE.md is gone; per-skill dogfood/ folders are deleted.
 
 ### Changed
 
@@ -246,7 +259,7 @@ The interop standard is unchanged. Skills still produce `.{skill}-ready/*.md` ar
 
 ## v1.6.6 (2026-04-24)
 
-Documentation-only patch. Suite-wide SUITE.md refresh introducing the canonical dogfood target: [aihxp/mirror-box](https://github.com/aihxp/mirror-box). Adds a new "Canonical dogfood target" section to SUITE.md with links to the ten per-skill dogfood artifacts. Adds composition principle #7 codifying the byte-identical-SUITE.md invariant across siblings. No behavioral changes to the skill.
+Documentation-only patch. Suite-wide SUITE.md refresh introducing the canonical dogfood target: [hannsxpeter/mirror-box](https://github.com/hannsxpeter/mirror-box). Adds a new "Canonical dogfood target" section to SUITE.md with links to the ten per-skill dogfood artifacts. Adds composition principle #7 codifying the byte-identical-SUITE.md invariant across siblings. No behavioral changes to the skill.
 
 ### Changed
 
@@ -260,7 +273,7 @@ Same rationale as prior x.y.z patches: the skill's behavior, frontmatter contrac
 
 ## v1.6.5 (2026-04-23)
 
-Documentation-only patch. Reflects the arrival of `harden-ready` v1.0.0 (https://github.com/aihxp/ready-suite/tree/main/skills/harden-ready) as a live sibling in the ready-suite. harden-ready is the tenth and final core-suite skill; its v1.0.0 release completes the shipping tier alongside deploy-ready, observe-ready, and launch-ready, and completes the ready-suite across planning (four), building (two), and shipping (four) tiers. harden-ready owns post-deploy adversarial review, OWASP Top 10 walkthroughs (Web / API / LLM), compliance control-to-code mapping (SOC 2 / HIPAA / PCI-DSS / GDPR), pen-test preparation and retest discipline, responsible-disclosure program design beyond SECURITY.md, and class-not-instance post-incident hardening. No behavioral changes to this skill.
+Documentation-only patch. Reflects the arrival of `harden-ready` v1.0.0 (https://github.com/hannsxpeter/ready-suite/tree/main/skills/harden-ready) as a live sibling in the ready-suite. harden-ready is the tenth and final core-suite skill; its v1.0.0 release completes the shipping tier alongside deploy-ready, observe-ready, and launch-ready, and completes the ready-suite across planning (four), building (two), and shipping (four) tiers. harden-ready owns post-deploy adversarial review, OWASP Top 10 walkthroughs (Web / API / LLM), compliance control-to-code mapping (SOC 2 / HIPAA / PCI-DSS / GDPR), pen-test preparation and retest discipline, responsible-disclosure program design beyond SECURITY.md, and class-not-instance post-incident hardening. No behavioral changes to this skill.
 
 ### Changed
 
@@ -273,7 +286,7 @@ The skill's behavior, frontmatter contract, and reference library are unchanged.
 
 ## v1.6.4 (2026-04-23)
 
-Documentation-only patch. Reflects the arrival of `roadmap-ready` v1.0.0 (https://github.com/aihxp/ready-suite/tree/main/skills/roadmap-ready) as a live sibling in the ready-suite. This release completes the nine-skill suite: `prd-ready` (what), `architecture-ready` (how), `roadmap-ready` (when), `stack-ready` (with what tools), `repo-ready` (the repo), `production-ready` (the app), `deploy-ready` (ship it), `observe-ready` (keep it healthy), `launch-ready` (tell the world). No behavioral changes to this skill.
+Documentation-only patch. Reflects the arrival of `roadmap-ready` v1.0.0 (https://github.com/hannsxpeter/ready-suite/tree/main/skills/roadmap-ready) as a live sibling in the ready-suite. This release completes the nine-skill suite: `prd-ready` (what), `architecture-ready` (how), `roadmap-ready` (when), `stack-ready` (with what tools), `repo-ready` (the repo), `production-ready` (the app), `deploy-ready` (ship it), `observe-ready` (keep it healthy), `launch-ready` (tell the world). No behavioral changes to this skill.
 
 ### Changed
 
@@ -286,7 +299,7 @@ The skill's behavior, frontmatter contract, and reference library are unchanged.
 
 ## v1.6.3 (2026-04-23)
 
-Documentation-only patch. Reflects the arrival of `architecture-ready` v1.0.0 (https://github.com/aihxp/ready-suite/tree/main/skills/architecture-ready) as a live sibling in the ready-suite. architecture-ready is a new planning-tier sibling; repo-ready's stack-detection step may also read architecture-ready's service-count signal when choosing monorepo vs. polyrepo. No behavioral changes to the skill.
+Documentation-only patch. Reflects the arrival of `architecture-ready` v1.0.0 (https://github.com/hannsxpeter/ready-suite/tree/main/skills/architecture-ready) as a live sibling in the ready-suite. architecture-ready is a new planning-tier sibling; repo-ready's stack-detection step may also read architecture-ready's service-count signal when choosing monorepo vs. polyrepo. No behavioral changes to the skill.
 
 ### Changed
 
@@ -301,7 +314,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [1.6.2] - 2026-04-23
 
-Documentation-only patch. Reflects the arrival of `prd-ready` v1.0.0 (https://github.com/aihxp/ready-suite/tree/main/skills/prd-ready) as a live sibling in the ready-suite. This release completes the top of the planning tier: prd-ready defines WHAT we are building, upstream of architecture-ready (HOW), roadmap-ready (WHEN), and stack-ready (WITH WHAT TOOLS). No behavioral changes to the skill.
+Documentation-only patch. Reflects the arrival of `prd-ready` v1.0.0 (https://github.com/hannsxpeter/ready-suite/tree/main/skills/prd-ready) as a live sibling in the ready-suite. This release completes the top of the planning tier: prd-ready defines WHAT we are building, upstream of architecture-ready (HOW), roadmap-ready (WHEN), and stack-ready (WITH WHAT TOOLS). No behavioral changes to the skill.
 
 ### Changed
 
@@ -309,7 +322,7 @@ Documentation-only patch. Reflects the arrival of `prd-ready` v1.0.0 (https://gi
 
 ## [1.6.1] - 2026-04-23
 
-Documentation-only patch. Reflects the arrival of launch-ready v1.0.0 (https://github.com/aihxp/ready-suite/tree/main/skills/launch-ready) as a live sibling in the ready-suite. This release completes the shipping tier: deploy-ready ships it, observe-ready keeps it healthy, launch-ready tells the world. No behavioral changes to the skill.
+Documentation-only patch. Reflects the arrival of launch-ready v1.0.0 (https://github.com/hannsxpeter/ready-suite/tree/main/skills/launch-ready) as a live sibling in the ready-suite. This release completes the shipping tier: deploy-ready ships it, observe-ready keeps it healthy, launch-ready tells the world. No behavioral changes to the skill.
 
 ### Changed
 

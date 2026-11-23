@@ -12,7 +12,7 @@ The skill follows semantic versioning. Security fixes land on the latest minor r
 
 **To file a report:**
 
-1. Navigate to the [Security tab](https://github.com/aihxp/ready-suite/security) of this repository
+1. Navigate to the [Security tab](https://github.com/hannsxpeter/ready-suite/security) of this repository
 2. Click **"Report a vulnerability"**
 3. Fill in the form with as much detail as you can -- affected reference file or SKILL.md section, reproduction steps, and the impact you observed
 
@@ -29,7 +29,7 @@ Please do **not** open a public issue for security concerns -- public issues tur
 | Fix / mitigation timeline | Communicated at triage; depends on severity      |
 | Public disclosure         | **90-day coordinated disclosure** (see below)    |
 
-If you do not receive an acknowledgement within 72 hours, please open a [Discussion](https://github.com/aihxp/ready-suite/discussions) asking us to check our Security tab -- do not repost the vulnerability details in the Discussion.
+If you do not receive an acknowledgement within 72 hours, please open a [Discussion](https://github.com/hannsxpeter/ready-suite/discussions) asking us to check our Security tab -- do not repost the vulnerability details in the Discussion.
 
 ## Disclosure Policy
 

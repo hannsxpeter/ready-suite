@@ -6,7 +6,7 @@
 # with `@aihxp @second-maintainer-handle` so PRs require both reviewers.
 #
 # Cross-suite governance lives at:
-# https://github.com/aihxp/ready-suite/blob/main/.github/CODEOWNERS
+# https://github.com/hannsxpeter/ready-suite/blob/main/.github/CODEOWNERS
 
 # Default: skill maintainer reviews everything.
 * @aihxp

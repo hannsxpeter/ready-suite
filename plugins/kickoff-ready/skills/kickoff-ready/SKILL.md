@@ -1,8 +1,8 @@
 ---
 name: kickoff-ready
 description: "Sequence the ten ready-suite specialists for a greenfield project from raw user intent. Triggers on 'kickoff,' 'new project from scratch,' 'walk me through idea to launch,' 'help me ship it end-to-end,' 'orchestrate the whole arc,' 'I have an idea, what next.' Owns sequence decision, handoff invocation, progress ledger (`.kickoff-ready/PROGRESS.md`), resume protocol, skip-and-import detection. The only meta-tier skill; every other ready-suite sibling is downstream from this one. Refuses scope leak (writing PRD/architecture/roadmap/launch content the specialists own), rubber-stamp orchestration (advancing the ledger without verifying artifact on disk), phantom resume (claiming resume but starting fresh), ghost handoff (invoking a sibling without verifying upstream artifact), and happy-path orchestration (no policy for skip, re-invoke, import, or sibling failure). Does not produce specialist content; routes to prd-ready, architecture-ready, roadmap-ready, stack-ready, repo-ready, production-ready, deploy-ready, observe-ready, launch-ready, harden-ready. Greenfield only; existing-codebase migrations route to the relevant specialist directly. Full trigger list in README."
-version: 3.0.2
-updated: 2026-05-30
+version: 3.1.0
+updated: 2026-11-23
 changelog: CHANGELOG.md
 suite: ready-suite
 tier: orchestration
@@ -286,7 +286,7 @@ If the work is adversarial review, delegate to `harden-ready`. Same protocol.
 
 If the work is ongoing phase or milestone management after the kickoff arc completes, delegate to a phase orchestrator (GSD's command tree is one option; BMAD with the boundary translation in production-ready/ORCHESTRATORS.md is another). kickoff-ready is one-shot per project.
 
-**If your harness exposes a skill-invocation tool** (Claude Code's slash command, Codex's dollar-sign form, Antigravity's Agent Skills standard), invoke the sibling directly when the handoff trigger fires. **Otherwise**, surface the handoff to the user as guidance text per [`references/handoff-protocols.md`](references/handoff-protocols.md): "This step needs `prd-ready`. Install it from https://github.com/aihxp/ready-suite/tree/main/skills/prd-ready, then run it on this project. When `.prd-ready/PRD.md` exists, return to kickoff-ready and we will verify and advance." Do not generate the sibling's output inline from this skill; the handoff is the contract.
+**If your harness exposes a skill-invocation tool** (Claude Code's slash command, Codex's dollar-sign form, Antigravity's Agent Skills standard), invoke the sibling directly when the handoff trigger fires. **Otherwise**, surface the handoff to the user as guidance text per [`references/handoff-protocols.md`](references/handoff-protocols.md): "This step needs `prd-ready`. Install it from https://github.com/hannsxpeter/ready-suite/tree/main/skills/prd-ready, then run it on this project. When `.prd-ready/PRD.md` exists, return to kickoff-ready and we will verify and advance." Do not generate the sibling's output inline from this skill; the handoff is the contract.
 
 ## Session state and resume
 

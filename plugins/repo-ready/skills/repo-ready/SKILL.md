@@ -1,8 +1,8 @@
 ---
 name: repo-ready
 description: "Set up production-grade repository structure, documentation, CI/CD, quality tooling, and platform configuration -- across any stack (Node/Python/Go/Rust/Java/Ruby/Swift/C#/PHP/Elixir/C++/Dart) and any platform (GitHub/GitLab/Bitbucket). Use this skill whenever the user asks to 'set up a repo,' 'initialize a project,' 'add documentation,' 'set up CI,' 'configure linting,' 'add a README,' 'set up GitHub Actions,' 'make my repo professional,' 'add contributing guidelines,' 'set up release automation,' or describes wanting a clean, well-structured repository. Triggers also include requests to add a LICENSE, CHANGELOG, SECURITY.md, CODE_OF_CONDUCT, issue templates, PR templates, branch protection, dependency scanning, badges, .gitignore, .editorconfig, Makefile, devcontainer, or any 'repo hygiene' task. This skill enforces a no-placeholder rule -- every generated file must contain actionable content tailored to the project's stack, type, and stage, not generic TODO markers or lorem ipsum."
-version: 3.0.2
-updated: 2026-05-30
+version: 3.1.0
+updated: 2026-11-23
 changelog: CHANGELOG.md
 suite: ready-suite
 tier: building
@@ -638,7 +638,7 @@ The body above is enough to start. For depth on a specific layer, load the match
 | `references/community-standards.md` | **Tier 1** -- README, LICENSE, CONTRIBUTING templates | ~8K |
 | `references/readme-craft.md` | **Tier 1** -- README anatomy, badges, demos, SEO | ~9K |
 | `references/audit-mode.md` | **Tier 2** -- Mode C scoring workflow, AUDIT-REPORT.md template, re-audit loop | ~10K |
-| `references/multi-repo-suite-layout.md` | **Mode D.** Canonical multi-repo-suite layout (hub + N specialists; byte-identical collection map; coordinated version table; tag-release parity; meta-linter; five maintenance rituals). Loaded when the user is building or maintaining a coordinated suite of repos that ship together. Generalized from the aihxp/ready-suite pattern. | ~10K |
+| `references/multi-repo-suite-layout.md` | **Mode D.** Canonical multi-repo-suite layout (hub + N specialists; byte-identical collection map; coordinated version table; tag-release parity; meta-linter; five maintenance rituals). Loaded when the user is building or maintaining a coordinated suite of repos that ship together. Generalized from the hannsxpeter/ready-suite pattern. | ~10K |
 | `references/repo-antipatterns.md` | **Tier 1+ + Mode C audits.** Named-failure-mode catalog with grep tests, severity, and per-skill guards. Complements `repo-audit.md` (the 42-criteria scorecard) and `audit-mode.md` (the scoring engine). | ~5K |
 | `references/quality-tooling.md` | **Tier 2** -- linters, formatters, hooks per stack | ~16K |
 | `references/ci-cd-workflows.md` | **Tier 2** -- GitHub Actions, GitLab CI templates | ~17K |

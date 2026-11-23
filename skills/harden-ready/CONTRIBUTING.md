@@ -1,12 +1,12 @@
 # Contributing to harden-ready
 
-Thanks for considering a contribution. This skill is part of the **[ready-suite](https://github.com/aihxp/ready-suite)**, a composable set of eleven AI skills covering the full arc from idea to launch.
+Thanks for considering a contribution. This skill is part of the **[ready-suite](https://github.com/hannsxpeter/ready-suite)**, a composable set of eleven AI skills covering the full arc from idea to launch.
 
 ## Read the suite's contributor guide first
 
 The canonical contributor guide for every skill in the suite lives at:
 
-**https://github.com/aihxp/ready-suite/blob/main/CONTRIBUTING.md**
+**https://github.com/hannsxpeter/ready-suite/blob/main/CONTRIBUTING.md**
 
 It documents:
 
@@ -24,11 +24,11 @@ It documents:
 
 For the maintainer-facing version (SUITE.md sync ritual, version-bump rules, tag-release parity, the five maintenance rituals), see:
 
-**https://github.com/aihxp/ready-suite/blob/main/MAINTAINING.md**
+**https://github.com/hannsxpeter/ready-suite/blob/main/MAINTAINING.md**
 
 ## Skill-specific notes
 
-Bug reports for content of `SKILL.md` or any reference file in this repo: open an issue here. Cross-suite changes (touching `SUITE.md`, the `compatible_with` frontmatter, or anything that affects more than this single skill): open an issue at [`aihxp/ready-suite`](https://github.com/aihxp/ready-suite/issues) instead so the discussion is visible to the suite as a whole.
+Bug reports for content of `SKILL.md` or any reference file in this repo: open an issue here. Cross-suite changes (touching `SUITE.md`, the `compatible_with` frontmatter, or anything that affects more than this single skill): open an issue at [`hannsxpeter/ready-suite`](https://github.com/hannsxpeter/ready-suite/issues) instead so the discussion is visible to the suite as a whole.
 
 ## License
 

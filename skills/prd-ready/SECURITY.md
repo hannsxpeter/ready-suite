@@ -25,5 +25,5 @@ The skill is documentation; it does not execute code, store secrets, or process 
 
 ## Cross-references
 
-- Cross-suite security policy: [aihxp/ready-suite/SECURITY.md](https://github.com/aihxp/ready-suite/blob/main/SECURITY.md)
-- Skill-suite hub: [aihxp/ready-suite](https://github.com/aihxp/ready-suite)
+- Cross-suite security policy: [hannsxpeter/ready-suite/SECURITY.md](https://github.com/hannsxpeter/ready-suite/blob/main/SECURITY.md)
+- Skill-suite hub: [hannsxpeter/ready-suite](https://github.com/hannsxpeter/ready-suite)

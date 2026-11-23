@@ -8,13 +8,17 @@ For the contributor-facing version of these conventions, see [`CONTRIBUTING.md`]
 
 **Pattern source.** The discipline below is the ready-suite-specific instance of the canonical multi-repo-suite layout pattern, documented generically in [`skills/repo-ready/references/multi-repo-suite-layout.md`](skills/repo-ready/references/multi-repo-suite-layout.md) (loaded as `Mode D` of repo-ready). The hub-vs-specialist split, byte-identical collection-map invariant, coordinated version-table discipline, and the rituals all originated there. The ready-suite started as eleven separate repos plus a hub; in 2026-05 it consolidated to a monorepo (this repo) with `skills/<skill>/` subdirectories. The Mode D reference still describes both the multi-repo and monorepo variants of the pattern.
 
-**Family relationship.** ready-suite is the modular parent. [`arc-ready`](https://github.com/aihxp/arc-ready) is the child born from ready-suite, carrying the same artifact paths, named failure modes, and tests into a single-skill distribution. [`Pillars`](https://github.com/aihxp/pillars) is the companion project-context standard: its `agents/*.md` files give ready-suite and arc-ready durable memory about project facts, decisions, constraints, and gaps.
+**Family relationship.** ready-suite is the modular parent. [`arc-ready`](https://github.com/hannsxpeter/arc-ready) is the child born from ready-suite, carrying the same artifact paths, named failure modes, and tests into a single-skill distribution. [`Pillars`](https://github.com/hannsxpeter/pillars) is the companion project-context standard: its `agents/*.md` files give ready-suite and arc-ready durable memory about project facts, decisions, constraints, and gaps.
 
 ## Layout
 
 ```
 ready-suite/                     # the monorepo (this directory)
-  README.md                      # discovery hub
+  README.md                      # product landing (quest map + install)
+  package.json                   # @hxp-tools/ready-suite npm package
+  bin/install.js                 # npx entry; materializes ~/.ready-suite
+  assets/                        # hero, quest-map, arc-loop SVGs
+  docs/quick-proof.md            # ten-minute install proof
   SUITE.md                       # canonical map; byte-identical with skills/<skill>/SUITE.md
   VERSION                        # release-train version shared by every skill and meta plugin
   CHANGELOG.md                   # hub-level curated narrative (dated, not versioned)
@@ -24,11 +28,11 @@ ready-suite/                     # the monorepo (this directory)
   MAINTAINING.md                 # this file
   ORCHESTRATORS.md               # GSD/BMAD/Spec Kit/Superpowers integration patterns
   install.sh, uninstall.sh       # multi-harness installers
-  scripts/lint.sh                # 7-check meta-linter
+  scripts/lint.sh                # meta-linter
   scripts/bump-suite-version.sh  # coordinated release-train bump helper
   .editorconfig, .gitattributes  # root editor and line-ending defaults
   .github/workflows/lint.yml     # CI
-  references/                    # hub-level references (TRIGGER-DISAMBIGUATION, etc.)
+  references/                    # hub-level references (TRIGGER-DISAMBIGUATION)
   plugins/                       # Claude Code plugin marketplace vendor copies
   skills/
     <skill-name>/
@@ -120,6 +124,12 @@ Steps:
 3. Review [`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md).
 4. Run the release verification commands from the checklist.
 5. Commit all intended release files together and tag the monorepo `v<x.y.z>`.
+6. Create the GitHub Release for `v<x.y.z>`.
+7. Publish the npm package when the train includes packaging changes:
+   ```bash
+   npm publish --access public
+   ```
+   Keep `package.json` version identical to root `VERSION`.
 
 ### Ritual 4: lint regression recovery
 
@@ -165,13 +175,13 @@ The lint is bash-3.2-compatible (macOS default), uses no associative arrays, and
 ## Discipline rules the lint cannot enforce
 
 - **Cross-skill artifact-path agreement**: every skill claims to read or write a `.<skill-name>/` artifact. If two skills disagree on a filename inside that path, the lint will not catch it. ORCHESTRATORS.md and the EXAMPLE-*.md worked examples are the cross-references.
-- **Reference link validity**: links between skill SKILL.md files use full GitHub URLs (`https://github.com/aihxp/ready-suite/tree/main/skills/<skill>`). If a skill is renamed or removed, these links 404. No automated check yet.
+- **Reference link validity**: links between skill SKILL.md files use full GitHub URLs (`https://github.com/hannsxpeter/ready-suite/tree/main/skills/<skill>`). If a skill is renamed or removed, these links 404. No automated check yet.
 
 When you encounter a recurring failure mode the lint cannot catch, add a check to `scripts/lint.sh`. The lint is canonical: discipline gets enforced mechanically or it does not get enforced.
 
 ## History
 
-Pre-2026-05 the suite shipped as eleven separate repos under `aihxp/<skill>-ready` plus this hub. Each skill carried its own tags, GitHub Releases, and CHANGELOG. Coordinated patches required a five-step ritual across twelve repos with `gh release create` per skill. The discipline scaled to v1.x, but the cost-per-patch was high.
+Pre-2026-05 the suite shipped as eleven separate repos under `hannsxpeter/<skill>-ready` plus this hub. Each skill carried its own tags, GitHub Releases, and CHANGELOG. Coordinated patches required a five-step ritual across twelve repos with `gh release create` per skill. The discipline scaled to v1.x, but the cost-per-patch was high.
 
 In 2026-05 the eleven skills consolidated into `skills/<skill>/` subdirectories of this hub. The eleven standalone repos were deleted. The five-ritual workflow collapsed to three. Tag-release parity is moot in the monorepo and was dropped from the lint. The byte-identical SUITE.md invariant remains, now between the hub root and each `skills/<skill>/`.
 

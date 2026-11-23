@@ -159,7 +159,7 @@ The two-check verification (exists, non-empty) is invariant. Only the read mecha
 If kickoff-ready reaches a step where the next sibling is not installed:
 
 1. **Detect.** The Skill tool errors (Claude Code, Codex, Antigravity), or the user reports the sibling is not on disk (Cursor, Windsurf), or the user does not have access (chat-only).
-2. **Surface install instructions.** Each sibling has a GitHub URL: https://github.com/aihxp/<sibling-name>. The recommended install on Claude Code is symlinking the dev copy:
+2. **Surface install instructions.** Each sibling has a GitHub URL: https://github.com/hannsxpeter/<sibling-name>. The recommended install on Claude Code is symlinking the dev copy:
    ```bash
    ln -s ~/Projects/<sibling-name> ~/.claude/skills/<sibling-name>
    ```

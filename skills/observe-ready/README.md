@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-observe--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Keep a deployed app healthy once real users are on it. Refuse paper SLOs, blind dashboards, and paper runbooks.**
@@ -18,10 +18,10 @@ None of this is a code bug. It is an observability-mechanics bug, and the toolin
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -81,10 +81,10 @@ The short frontmatter description is tight on purpose, to speed up skill-routing
 - Mode E: "the bill is detonating; cut without losing signal"
 
 **Negative triggers (route elsewhere):**
-- Tool selection ("Datadog vs. Honeycomb," "self-host Prometheus or Grafana Cloud") -> [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready)
-- Deployment mechanics ("write the CI/CD pipeline," "canary config," "rollback plan," "migration calendar") -> [`deploy-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/deploy-ready)
-- App wiring ("build the users page," "add RBAC") -> [`production-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready)
-- Repo hygiene ("CODEOWNERS," "branch protection") -> [`repo-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready)
+- Tool selection ("Datadog vs. Honeycomb," "self-host Prometheus or Grafana Cloud") -> [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready)
+- Deployment mechanics ("write the CI/CD pipeline," "canary config," "rollback plan," "migration calendar") -> [`deploy-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/deploy-ready)
+- App wiring ("build the users page," "add RBAC") -> [`production-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready)
+- Repo hygiene ("CODEOWNERS," "branch protection") -> [`repo-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready)
 - Secrets vaulting and rotation -> security territory, not this skill (observe-ready does opinion on PII scrubbing at the telemetry boundary)
 - Product analytics / funnels / A/B testing -> `production-ready`'s telemetry domain, not operational observability
 - Performance tuning -> cloud-provider docs or a future scale-ready

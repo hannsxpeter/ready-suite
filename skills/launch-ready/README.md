@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-launch--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![aihxp/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/aihxp/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Put a deployed, healthy app in front of real users without shipping AI-slop. Refuses hero-fatigue copy, spec-sheet positioning, paper waitlists, unrendered OG cards, and silent launches.**
@@ -18,10 +18,10 @@ None of this is a code bug. It is a launch-mechanics bug, and the tooling that e
 
 ## Install
 
-This skill ships as part of the [ready-suite](https://github.com/aihxp/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
+This skill ships as part of the [ready-suite](https://github.com/hannsxpeter/ready-suite) monorepo. The hub installer symlinks `SKILL.md` and `references/` for all eleven skills into every detected harness (Claude Code, Codex, Cursor, pi, OpenClaw, any Agent Skills harness):
 
 ```bash
-git clone https://github.com/aihxp/ready-suite.git ~/Projects/ready-suite
+git clone https://github.com/hannsxpeter/ready-suite.git ~/Projects/ready-suite
 bash ~/Projects/ready-suite/install.sh
 ```
 
@@ -81,11 +81,11 @@ The short frontmatter description is tight on purpose, to speed up skill-routing
 - Mode E: "B2B direct; no PH / HN, keep the rest"
 
 **Negative triggers (route elsewhere):**
-- Building the app ("wire the users page," "add RBAC") -> [`production-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/production-ready)
-- Deploying the app ("CI/CD," "canary," "migration") -> [`deploy-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/deploy-ready)
-- Monitoring the app ("SLO," "Datadog," "runbook") -> [`observe-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/observe-ready)
-- Picking the tool ("Framer vs. Webflow," "Kit vs. Loops") -> [`stack-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/stack-ready)
-- Repo hygiene ("CODEOWNERS," "release automation") -> [`repo-ready`](https://github.com/aihxp/ready-suite/tree/main/skills/repo-ready)
+- Building the app ("wire the users page," "add RBAC") -> [`production-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/production-ready)
+- Deploying the app ("CI/CD," "canary," "migration") -> [`deploy-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/deploy-ready)
+- Monitoring the app ("SLO," "Datadog," "runbook") -> [`observe-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/observe-ready)
+- Picking the tool ("Framer vs. Webflow," "Kit vs. Loops") -> [`stack-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/stack-ready)
+- Repo hygiene ("CODEOWNERS," "release automation") -> [`repo-ready`](https://github.com/hannsxpeter/ready-suite/tree/main/skills/repo-ready)
 - In-app product telemetry (feature adoption, retention cohorts, A/B tests) -> `production-ready`'s analytics-and-telemetry reference
 - Transactional email (password reset, receipts) -> `production-ready`'s notifications-and-email reference
 - Ongoing marketing (content cadence, paid ads, sustained nurture) -> separate discipline, not in scope
