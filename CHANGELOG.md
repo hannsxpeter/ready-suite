@@ -16,7 +16,7 @@ Minor release across all eleven skills, the meta plugin, marketplace metadata, a
 
 ### Changed
 
-- **Owner URLs** realigned from `aihxp` to `hannsxpeter` across hub docs, skills, plugins, and install paths.
+- **Owner URLs** realigned from the previous maintainer handle to `hannsxpeter` across hub docs, skills, plugins, and install paths.
 - **GitHub About** simplified; homepage points at the npm package.
 
 ### Removed
@@ -152,7 +152,7 @@ Audit run via repo-ready audit-mode against all 12 suite repos. The eleven speci
 ### Added (across all 11 specialists)
 
 - `SECURITY.md`: private vulnerability disclosure policy with severity-tied response SLAs, GitHub Security Advisories preferred channel, named realistic security surface for markdown-only skills.
-- `.github/CODEOWNERS`: default `* @aihxp` rule with comment block explaining the second-maintainer addition path.
+- `.github/CODEOWNERS`: default rule for the then-maintainer handle with comment block explaining the second-maintainer addition path.
 - `CONTRIBUTING.md`: thin pointer to the hub canonical contributor guide. No content duplication.
 - `.gitignore`: minimal OS / editor / install-backup ignores in the 6 specialists that lacked the file.
 
@@ -172,7 +172,7 @@ The bus factor remains at 1, but the procedural blockers to adding a co-maintain
 
 ### Added
 
-- `.github/CODEOWNERS`: routes PR review automatically. Default `* @aihxp` plus path-specific rules calling out high-blast-radius surfaces (SUITE.md, ORCHESTRATORS.md, install.sh, scripts/, .github/workflows, TRIGGER-DISAMBIGUATION.md, plugin marketplace manifest).
+- `.github/CODEOWNERS`: routes PR review automatically. Default rule for the then-maintainer handle plus path-specific rules calling out high-blast-radius surfaces (SUITE.md, ORCHESTRATORS.md, install.sh, scripts/, .github/workflows, TRIGGER-DISAMBIGUATION.md, plugin marketplace manifest).
 - `CONTRIBUTING.md`: contributor-facing guide. Covers what kinds of contributions land, what gets refused, the unicode rule, the bash 3.2 rule, the SUITE.md byte-identical rule, the `frontmatter-version` matches `CHANGELOG.md` rule, the `compatible_with` standards-level values, the trigger-overlap advisory, lint mechanics, single-skill vs. coordinated cross-suite change protocols, commit-message style.
 - `MAINTAINING.md`: maintainer-facing how-to. Documents the five rituals (single-skill patch, coordinated cross-suite patch, hub-only patch, lint regression recovery, new-specialist release), version-bump rules with examples, tag-release parity discipline with backfill recipe, SUITE.md sync mechanics, em-dash rule, and a clean-coordinated-patch checklist.
 

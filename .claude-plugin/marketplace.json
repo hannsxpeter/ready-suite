@@ -1,7 +1,7 @@
 {
   "name": "ready-suite",
   "description": "Eleven AI skills covering the full arc from idea to launch, plus a meta plugin that bundles them all.",
-  "owner": { "name": "aihxp", "url": "https://github.com/hannsxpeter" },
+  "owner": { "name": "hannsxpeter", "url": "https://github.com/hannsxpeter" },
   "metadata": {
     "version": "3.1.0",
     "homepage": "https://github.com/hannsxpeter/ready-suite"
