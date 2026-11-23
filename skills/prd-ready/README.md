@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-prd--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/hannsxpeter%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Write a PRD that engineering, design, QA, and downstream planning skills can consume without a clarification meeting. Refuses hollow PRDs, invisible PRDs, feature laundry lists, solution-first PRDs, assumption-soup PRDs, and moving-target PRDs.**

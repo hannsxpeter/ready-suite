@@ -41,7 +41,7 @@ This file documents what the repo-ready skill set up for the Pulse project at we
   workflows/
     ci.yml            -> lint + typecheck + test on push and PR
     release.yml       -> tag-and-release automation on tag push
-  CODEOWNERS          -> @aihxp default; @dartlogic-pilot reviewers on app/billing/ paths
+  CODEOWNERS          -> @hannsxpeter default; @dartlogic-pilot reviewers on app/billing/ paths
   ISSUE_TEMPLATE/
     bug.yml
     feature.yml

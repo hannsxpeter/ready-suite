@@ -3,7 +3,7 @@
 [![ready-suite](https://img.shields.io/badge/ready--suite-v3.0.0-blue)](../../README.md)
 [![skill](https://img.shields.io/badge/skill-architecture--ready-2f6fed)](SKILL.md)
 [![agent skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f6fed)](SKILL.md)
-[![hannsxpeter/pillars](https://img.shields.io/badge/aihxp%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
+[![hannsxpeter/pillars](https://img.shields.io/badge/hannsxpeter%2Fpillars-standard-0f766e)](https://github.com/hannsxpeter/pillars)
 [![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 > **Given a PRD, produce an architecture that says what system shape to build and why, before any code is written or any tool is chosen. Refuses architecture theater, paper-tiger architecture, cargo-cult cloud-native, stackitecture, resume-driven architecture, horoscope architecture, ghost architecture, and "scalable" as a claim with no numbers.**
