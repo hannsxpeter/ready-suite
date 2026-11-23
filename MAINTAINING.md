@@ -124,12 +124,18 @@ Steps:
 3. Review [`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md).
 4. Run the release verification commands from the checklist.
 5. Commit all intended release files together and tag the monorepo `v<x.y.z>`.
-6. Create the GitHub Release for `v<x.y.z>`.
-7. Publish the npm package when the train includes packaging changes:
-   ```bash
-   npm publish --access public
-   ```
-   Keep `package.json` version identical to root `VERSION`.
+6. Push the tag: `git push origin v<x.y.z>`. The [publish workflow](.github/workflows/publish.yml) verifies the tag against `package.json` and `VERSION`, runs `npm run release:check`, and publishes `@hxp-tools/ready-suite` with provenance. Do not run `npm publish` by hand for normal trains.
+7. Create the GitHub Release for `v<x.y.z>` if it is not already created.
+
+The package is `@hxp-tools/ready-suite` (`publishConfig.access` is `public`). Keep `package.json` version identical to root `VERSION`.
+
+The only exception to "never run `npm publish` by hand" is the first publish of a new package name, because npm Trusted Publishing can only be configured on a package that already exists. That first publish is:
+
+```bash
+npm publish --access public --auth-type=web
+```
+
+Run it from a real terminal on the tagged commit. npm prints an `https://www.npmjs.com/auth/cli/...` link; approve it in the browser. Then set the Trusted Publisher on npmjs.com for GitHub Actions / `hannsxpeter` / `ready-suite` / workflow `publish.yml` / blank environment / direct `npm publish` allowed. Leave the `NPM_TOKEN` secret unset once Trusted Publishing works.
 
 ### Ritual 4: lint regression recovery
 

@@ -1,0 +1,71 @@
+name: Publish to npm
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://registry.npmjs.org'
+
+      # npm 11.5.1 or newer can publish through npm Trusted Publishing (OIDC),
+      # so no long-lived token is needed once it is configured on npmjs.com.
+      - name: Use an npm that supports trusted publishing
+        run: npm install -g npm@11 && npm --version
+
+      - name: Verify release identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag_version="${GITHUB_REF_NAME#v}"
+          pkg_version="$(node -p "require('./package.json').version")"
+          root_version="$(tr -d ' \n\r' < VERSION)"
+          if [ "$tag_version" != "$pkg_version" ]; then
+            echo "Tag v$tag_version does not match package.json version $pkg_version."
+            exit 1
+          fi
+          if [ "$tag_version" != "$root_version" ]; then
+            echo "Tag v$tag_version does not match VERSION file $root_version."
+            exit 1
+          fi
+          git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" refs/remotes/origin/main; then
+            echo "Tagged commit is not on main."
+            exit 1
+          fi
+
+      - name: Release check
+        run: npm run release:check
+
+      - name: Publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(node -p "require('./package.json').version")"
+          if npm view "@hxp-tools/ready-suite@$version" version >/dev/null 2>&1; then
+            echo "@hxp-tools/ready-suite@$version is already published."
+            exit 1
+          fi
+          npm publish --provenance --access public
+        env:
+          # Empty when the NPM_TOKEN secret is removed; npm then uses trusted
+          # publishing through the id-token permission above.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
